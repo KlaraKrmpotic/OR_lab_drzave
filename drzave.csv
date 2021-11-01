@@ -1,0 +1,11 @@
+countryid,countryname,isocode,callingcode,currency,language,capitalcity,biggestcity,continent,area,population
+1,Croatia,HRV,385,kuna,Croatian,Zagreb,Zagreb,Europe,56594,4058165
+2,United_Kingdom,GBR,44,pound,English,London,London,Europe,242495,67081000
+3,France,FRA,33,euro,French,Paris,Paris,Europe,640679,67413000
+4,Germany,GER,49,euro,German,Berlin,Berlin,Europe,357022,83190556
+5,Brazil,BRA,55,real,Portugese,Brasilia,Sao Paulo,South America,8515767,210147125
+6,China,CHN,86,renwinbi,Chinese,Beijing,Shanghai,Asia,9596961,1411778724
+7,Canada,CAN,1,dollar,English,Ottawa,Toronto,North America,9984670,38246108
+8,Egypt,EGY,20,pound,Arabic,Cairo,Cairo,Africa,1010408,101478581
+9,Japan,JPN,81,yen,Japanese,Tokyo,Tokyo,Asia,377975,125360000
+10,United_States,USA,1,dollar,English,Washington,New York City,North America,9833520,331449281
