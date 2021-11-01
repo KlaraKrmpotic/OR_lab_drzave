@@ -2,11 +2,15 @@
 
 ### Mit Licence
 
-Author: Klara Krmpotic
-Published: November 1st, 2021
-Version: 1.0
-Languages: croatian, english
-Attributes:
+**Author**: Klara Krmpotic
+
+**Published**: November 1st, 2021
+
+**Version**: 1.0
+
+**Languages**: croatian, english
+
+**Attributes**:
 	1.  countryId - unique identifier for each country
 	2.  countrName - name of each country
 	3.  ISOcode - 3 letter notation specific for each country, ISO 3166-1 alpha-3
