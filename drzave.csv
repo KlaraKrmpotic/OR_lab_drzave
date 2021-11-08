@@ -1,11 +1,21 @@
-countryid,countryname,isocode,callingcode,currency,language,capitalcity,biggestcity,continent,area,population
-1,Croatia,HRV,385,kuna,Croatian,Zagreb,Zagreb,Europe,56594,4058165
-2,United_Kingdom,GBR,44,pound,English,London,London,Europe,242495,67081000
-3,France,FRA,33,euro,French,Paris,Paris,Europe,640679,67413000
-4,Germany,GER,49,euro,German,Berlin,Berlin,Europe,357022,83190556
-5,Brazil,BRA,55,real,Portugese,Brasilia,Sao Paulo,South America,8515767,210147125
-6,China,CHN,86,renwinbi,Chinese,Beijing,Shanghai,Asia,9596961,1411778724
-7,Canada,CAN,1,dollar,English,Ottawa,Toronto,North America,9984670,38246108
-8,Egypt,EGY,20,pound,Arabic,Cairo,Cairo,Africa,1010408,101478581
-9,Japan,JPN,81,yen,Japanese,Tokyo,Tokyo,Asia,377975,125360000
-10,United_States,USA,1,dollar,English,Washington,New York City,North America,9833520,331449281
+countryid,countryname,isocode,callingcode,currency,language,cityname,citypopulation,continent,area,population
+1,Croatia,HRV,385,kuna,Croatian,Zagreb,802338,Europe,56594,4058165
+1,Croatia,HRV,385,kuna,Croatian,Split,178192,Europe,56594,4058165
+2,United_Kingdom,GBR,44,pound,English,London,8961989,Europe,242495,67081000
+2,United_Kingdom,GBR,44,pound,English,Manchester,552858,Europe,242495,67081000
+3,France,FRA,33,euro,French,Paris,2175601,Europe,640679,67413000
+3,France,FRA,33,euro,French,Marseille,863310,Europe,640679,67413000
+4,Germany,GER,49,euro,German,Berlin,3664088,Europe,357022,83190556
+4,Germany,GER,49,euro,German,Munich,1488202,Europe,357022,83190556
+5,Brazil,BRA,55,real,Portugese,Brasilia,3094325,South America,8515767,210147125
+5,Brazil,BRA,55,real,Portugese,Sao Paulo,12396372,South America,8515767,210147125
+6,China,CHN,86,renwinbi,Chinese,Beijing,21893095,Asia,9596961,1411778724
+6,China,CHN,86,renwinbi,Chinese,Shanghai,24870895,Asia,9596961,1411778724
+7,Canada,CAN,1,dollar,English,Ottawa,934243,North America,9984670,38246108
+7,Canada,CAN,1,dollar,English,Toronto,2731571,North America,9984670,38246108
+8,Egypt,EGY,20,pound,Arabic,Cairo,12230350,Africa,1010408,101478581
+8,Egypt,EGY,20,pound,Arabic,Giza,4028062,Africa,1010408,101478581
+9,Japan,JPN,81,yen,Japanese,Tokyo,14043239,Asia,377975,125360000
+9,Japan,JPN,81,yen,Japanese,Osaka,2691185,Asia,377975,125360000
+10,United_States,USA,1,dollar,English,Washington D.C.,6385162,North America,9833520,331449281
+10,United_States,USA,1,dollar,English,New York City,20140470,North America,9833520,331449281

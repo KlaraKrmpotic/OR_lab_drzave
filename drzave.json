@@ -6,8 +6,18 @@
     "callingcode": 385,
     "currency": "kuna",
     "language": "Croatian",
-    "capitalcity": "[{ \"cityId\": 1, \"cityName\": \"Zagreb\"}]",
-    "biggestcity": "[{ \"cityId\": 1, \"cityName\": \"Zagreb\"}]",
+    "cities": [
+      {
+        "cityid": 1,
+        "cityname": "Zagreb",
+        "citypopulation": 802338
+      },
+      {
+        "cityid": 2,
+        "cityname": "Split",
+        "citypopulation": 178192
+      }
+    ],
     "continent": "Europe",
     "area": 56594,
     "population": 4058165
@@ -19,8 +29,18 @@
     "callingcode": 44,
     "currency": "pound",
     "language": "English",
-    "capitalcity": "[{ \"cityId\": 2, \"cityName\": \"London\"}]",
-    "biggestcity": "[{ \"cityId\": 2, \"cityName\": \"London\"}]",
+    "cities": [
+      {
+        "cityid": 3,
+        "cityname": "London",
+        "citypopulation": 8961989
+      },
+      {
+        "cityid": 4,
+        "cityname": "Manchester",
+        "citypopulation": 552858
+      }
+    ],
     "continent": "Europe",
     "area": 242495,
     "population": 67081000
@@ -32,8 +52,18 @@
     "callingcode": 33,
     "currency": "euro",
     "language": "French",
-    "capitalcity": "[{ \"cityId\": 3, \"cityName\": \"Paris\"}]",
-    "biggestcity": "[{ \"cityId\": 3, \"cityName\": \"Paris\"}]",
+    "cities": [
+      {
+        "cityid": 5,
+        "cityname": "Paris",
+        "citypopulation": 2175601
+      },
+      {
+        "cityid": 6,
+        "cityname": "Marseille",
+        "citypopulation": 863310
+      }
+    ],
     "continent": "Europe",
     "area": 640679,
     "population": 67413000
@@ -45,8 +75,18 @@
     "callingcode": 49,
     "currency": "euro",
     "language": "German",
-    "capitalcity": "[{ \"cityId\": 4, \"cityName\": \"Berlin\"}]",
-    "biggestcity": "[{ \"cityId\": 4, \"cityName\": \"Berlin\"}]",
+    "cities": [
+      {
+        "cityid": 7,
+        "cityname": "Berlin",
+        "citypopulation": 3664088
+      },
+      {
+        "cityid": 8,
+        "cityname": "Munich",
+        "citypopulation": 1488202
+      }
+    ],
     "continent": "Europe",
     "area": 357022,
     "population": 83190556
@@ -58,8 +98,18 @@
     "callingcode": 55,
     "currency": "real",
     "language": "Portugese",
-    "capitalcity": "[{ \"cityId\": 5, \"cityName\": \"Brasilia\"}]",
-    "biggestcity": "[{ \"cityId\": 6, \"cityName\": \"Sao Paulo\"}]",
+    "cities": [
+      {
+        "cityid": 9,
+        "cityname": "Brasilia",
+        "citypopulation": 3094325
+      },
+      {
+        "cityid": 10,
+        "cityname": "Sao Paulo",
+        "citypopulation": 12396372
+      }
+    ],
     "continent": "South America",
     "area": 8515767,
     "population": 210147125
@@ -71,8 +121,18 @@
     "callingcode": 86,
     "currency": "renwinbi",
     "language": "Chinese",
-    "capitalcity": "[{ \"cityId\": 7, \"cityName\": \"Beijing\"}]",
-    "biggestcity": "[{ \"cityId\": 8, \"cityName\": \"Shanghai\"}]",
+    "cities": [
+      {
+        "cityid": 11,
+        "cityname": "Beijing",
+        "citypopulation": 21893095
+      },
+      {
+        "cityid": 12,
+        "cityname": "Shanghai",
+        "citypopulation": 24870895
+      }
+    ],
     "continent": "Asia",
     "area": 9596961,
     "population": 1411778724
@@ -84,8 +144,18 @@
     "callingcode": 1,
     "currency": "dollar",
     "language": "English",
-    "capitalcity": "[{ \"cityId\": 9, \"cityName\": \"Ottawa\"}]",
-    "biggestcity": "[{ \"cityId\": 10, \"cityName\": \"Toronto\"}]",
+    "cities": [
+      {
+        "cityid": 13,
+        "cityname": "Ottawa",
+        "citypopulation": 934243
+      },
+      {
+        "cityid": 14,
+        "cityname": "Toronto",
+        "citypopulation": 2731571
+      }
+    ],
     "continent": "North America",
     "area": 9984670,
     "population": 38246108
@@ -97,8 +167,18 @@
     "callingcode": 20,
     "currency": "pound",
     "language": "Arabic",
-    "capitalcity": "[{ \"cityId\": 11, \"cityName\": \"Cairo\"}]",
-    "biggestcity": "[{ \"cityId\": 11, \"cityName\": \"Cairo\"}]",
+    "cities": [
+      {
+        "cityid": 15,
+        "cityname": "Cairo",
+        "citypopulation": 12230350
+      },
+      {
+        "cityid": 16,
+        "cityname": "Giza",
+        "citypopulation": 4028062
+      }
+    ],
     "continent": "Africa",
     "area": 1010408,
     "population": 101478581
@@ -110,8 +190,18 @@
     "callingcode": 81,
     "currency": "yen",
     "language": "Japanese",
-    "capitalcity": "[{ \"cityId\": 12, \"cityName\": \"Tokyo\"}]",
-    "biggestcity": "[{ \"cityId\": 12, \"cityName\": \"Tokyo\"}]",
+    "cities": [
+      {
+        "cityid": 17,
+        "cityname": "Tokyo",
+        "citypopulation": 14043239
+      },
+      {
+        "cityid": 18,
+        "cityname": "Osaka",
+        "citypopulation": 2691185
+      }
+    ],
     "continent": "Asia",
     "area": 377975,
     "population": 125360000
@@ -123,8 +213,18 @@
     "callingcode": 1,
     "currency": "dollar",
     "language": "English",
-    "capitalcity": "[{ \"cityId\": 13, \"cityName\": \"Washington\"}]",
-    "biggestcity": "[{ \"cityId\": 14, \"cityName\": \"New York City\"}]",
+    "cities": [
+      {
+        "cityid": 19,
+        "cityname": "Washington D.C.",
+        "citypopulation": 6385162
+      },
+      {
+        "cityid": 20,
+        "cityname": "New York City",
+        "citypopulation": 20140470
+      }
+    ],
     "continent": "North America",
     "area": 9833520,
     "population": 331449281
