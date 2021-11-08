@@ -1,0 +1,70 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    text-align: center;
+}
+
+img {
+    width:700px;
+    height:450px;
+    float: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: gray;
+}
+
+.repozitorij {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.downloads {
+    font-size: 1rem;
+}
+
+.button {
+    border-radius: 0.5rem;
+    background-color:rgb(14, 189, 136);
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    
+}
+
+.button:hover {
+    color: white;
+    background-color:cadetblue;
+}
+
+.footer, .header {
+    background: #8ccfc2;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.header {
+    padding: 15px;
+}
+
+h1 {
+    text-align: inherit;
+}
