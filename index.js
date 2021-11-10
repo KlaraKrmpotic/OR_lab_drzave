@@ -1,0 +1,60 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const path = require('path');
+const db = require('./databaseHandler');
+const router = express.Router();
+
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
+
+app.get('/index', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+app.get('/datatable', async function (req, res) {
+
+    const sqlCountries = `select countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
+        	    continent, area, population from country, city where city.cityId = ANY(country.cities);`;
+    try {
+        const countriesResult = (await db.query(sqlCountries, [])).rows;
+        res.render('datatable', {
+            title: 'Datatable',
+            hotels: countriesResult,
+            linkActive: 'datatable',
+        });
+    } catch (err) {
+        console.log(err);
+    }
+    
+});
+
+app.get('/drzave.json', (req, res) => {
+    res.sendFile(path.join(__dirname + '/drzave.json'))
+});
+
+app.get('/drzave.csv', (req, res) => {
+    res.sendFile(path.join(__dirname + '/drzave.csv'))
+});
+
+app.get('/pictures/worldMap.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pictures/worldMap.jpg'))
+});
+
+app.get('/style/index.css', (req, res) => {
+    res.sendFile(path.join(__dirname + '/style/index.css'))
+});
+
+app.get('/style/datatable.css', (req, res) => {
+    res.sendFile(path.join(__dirname + '/style/datatable.css'))
+});
+
+module.exports = router;
+
+app.listen(3000, () => {
+    console.log(`App running on port 3000.`)
+});

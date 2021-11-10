@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="style/index.css">
+        <link rel="stylesheet" href="./style/datatable.css">
     </head>
     <body>
         <header class="header">
             <div class="datatable-reference">
-                <a class="button" href="index.html">
-                    Back to index page
+                <a class="button" href="index">
+                    Povratak na index stranicu
                 </a>
             </div>
         </header>
         <main>
             <h1>Države</h1>
+
+            <div>
+                <form class="obrazac">
+                    <label for="vrijednost">Vrijednost za pretraživanje:</label>
+                    <input type="text" id="vrijednost" name="vrijednost" placeholder="Unesite vrijednost">
+                    <br></br>
+                    <label for="polje">Odaberi polje za pretragu:</label>
+                    <select name="polje" id="polje" placeholder="Odaberi polje">
+                        <option value="sve">Sva polja (wildcard)</option>
+                        <option value="countryId">ID</option>
+                        <option value="countryName">Ime</option>
+                        <option value="ISOcode">ISO code</option>
+                        <option value="callingCode">Pozivni broj</option>
+                        <option value="currency">Novčana valuta</option>
+                        <option value="language">Jezik</option>
+                        <option value="cities">Gradovi</option>
+                        <option value="continent">Kontinent</option>
+                        <option value="area">Površina</option>
+                        <option value="population">Populacija</option>
+                    </select>
+                    <br></br>
+                    <input type="submit" value="Pretraži">
+                </form>
+            </div>
+            
+            <div>
+                
+            </div>
+
             
         </main>
         <footer class="footer">
