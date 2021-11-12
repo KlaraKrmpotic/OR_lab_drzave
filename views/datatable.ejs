@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datatable</title>
+    <meta name="author" content="Klara Krmpotić">
+    <meta name="description" content="Search engine for database tables">
+    <meta charset="UTF-12">
+    <link rel="stylesheet" href="./style/datatable.css">
+</head>
+<body>
+    <header class="header">
+        <div class="datatable-reference">
+            <a class="button" href="index">
+                Povratak na index stranicu
+            </a>
+        </div>
+    </header>
+    <main>
+        <h2>Polje za pretragu</h2>
+
+        <form class="poljePretraga" name="formFilter" method="POST" action="/datatable/filter">
+            <label for="vrijednost">Vrijednost za pretraživanje:</label>
+            <input type="text" id="vrijednost" name="vrijednost" placeholder="Unesite vrijednost">
+            <br></br>
+            <label for="polje">Odaberi polje za pretragu:</label>
+            <select name="polje" id="polje" placeholder="Odaberi polje">
+                <option value="sve">Sva polja (wildcard)</option>
+                <option value="countryId">ID</option>
+                <option value="countryName">Ime</option>
+                <option value="ISOcode">ISO code</option>
+                <option value="callingCode">Pozivni broj</option>
+                <option value="currency">Novčana valuta</option>
+                <option value="language">Jezik</option>
+                <option value="cities">Gradovi</option>
+                <option value="continent">Kontinent</option>
+                <option value="area">Površina</option>
+                <option value="population">Populacija</option>
+            </select>
+            <br></br>
+            <input type="submit" value="Pretraži">
+        </form>
+        <!--HTML tablice koja se zajedno s obrascem za filtriranje i asinkronim pozivom za dohvaćanje podataka-->
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <table class="tablica">
+            <tr>    <!--Popis atributa-->
+                <th>ID</th>
+                <th>Ime</th>
+                <th>ISO code</th>
+                <th>Pozivni broj</th>
+                <th>Novčana valuta</th>
+                <th>Jezik</th>
+                <th>Ime grada</th>
+                <th>Populacija grada</th>
+                <th>Kontinent</th>
+                <th>Površina</th>
+                <th>Populacija</th>
+            </tr>
+            <tr id="promjena">
+
+            </tr>
+            <!--countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
+        	    continent, area, population-->
+            <% for (let country of countries) { %>
+                <tr id="promjena">
+                    <td> <%= country.countryid %> </td>
+                    <td> <%= country.countryname %> </td>
+                    <td> <%= country.isocode %> </td>
+                    <td> + <%= country.callingcode %> </td>
+                    <td> <%= country.currency %> </td>
+                    <td> <%= country.language %> </td>
+                    <td> <%= country.cityname %> </td>
+                    <td> <%= country.citypopulation %> </td>
+                    <td> <%= country.continent %> </td>
+                    <td> <%= country.area %> </td>
+                    <td> <%= country.population %> </td>
+                </tr>
+            <% } %>
+        
+        </table>
+        <p>
+
+        </p>
+        
+    </main>
+    <footer class="footer">
+        <div>Otvoreno računarstvo</div>
+        <div>Laboratorijske vježbe</div>
+        <div>ak. god. 2021./2022.</div>
+    </footer>
+</body>
+
+</html>

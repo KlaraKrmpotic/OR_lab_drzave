@@ -33,11 +33,28 @@ body {
 
 .footer {
     width: 100%;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
 }
 
 .header {
     padding: 15px;
+}
+
+.tablica {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(14, 189, 136);;
+    color: white;
 }

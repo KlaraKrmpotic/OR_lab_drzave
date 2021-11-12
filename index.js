@@ -5,6 +5,10 @@ const path = require('path');
 const db = require('./databaseHandler');
 const router = express.Router();
 
+app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({ extended: true }));
+
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
@@ -16,6 +20,21 @@ app.get('/index', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+var datatable = require('./datatable');
+app.use('/datatable', datatable);
+
+const methodOverride = require('method-override')
+ 
+app.use(methodOverride(function (req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        
+        var method = req.body._method
+        delete req.body._method
+        return method
+    }
+}))
+
+/*
 app.get('/datatable', async function (req, res) {
 
     const sqlCountries = `select countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
@@ -24,14 +43,14 @@ app.get('/datatable', async function (req, res) {
         const countriesResult = (await db.query(sqlCountries, [])).rows;
         res.render('datatable', {
             title: 'Datatable',
-            hotels: countriesResult,
+            countries: countriesResult,
             linkActive: 'datatable',
         });
     } catch (err) {
         console.log(err);
     }
-    
 });
+*/
 
 app.get('/drzave.json', (req, res) => {
     res.sendFile(path.join(__dirname + '/drzave.json'))
