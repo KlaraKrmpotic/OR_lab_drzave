@@ -27,30 +27,11 @@ const methodOverride = require('method-override')
  
 app.use(methodOverride(function (req, res) {
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-        
         var method = req.body._method
         delete req.body._method
         return method
     }
 }))
-
-/*
-app.get('/datatable', async function (req, res) {
-
-    const sqlCountries = `select countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
-        	    continent, area, population from country, city where city.cityId = ANY(country.cities);`;
-    try {
-        const countriesResult = (await db.query(sqlCountries, [])).rows;
-        res.render('datatable', {
-            title: 'Datatable',
-            countries: countriesResult,
-            linkActive: 'datatable',
-        });
-    } catch (err) {
-        console.log(err);
-    }
-});
-*/
 
 app.get('/drzave.json', (req, res) => {
     res.sendFile(path.join(__dirname + '/drzave.json'))
