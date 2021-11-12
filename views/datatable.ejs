@@ -6,9 +6,73 @@
     <meta name="description" content="Search engine for database tables">
     <meta charset="UTF-12">
     <link rel="stylesheet" href="./style/datatable.css">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            text-align: center;
+        }
+
+        .button {
+            border-radius: 0.5rem;
+            background-color:rgb(14, 189, 136);
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            color: white;
+            background-color:cadetblue;
+        }
+
+        .footer, .header {
+            background: #8ccfc2;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .footer {
+            width: 100%;
+            position: relative;
+            left: 0;
+            bottom: 0;
+        }
+
+        .header {
+            padding: 15px;
+        }
+
+        .tablica {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgb(14, 189, 136);;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
+        <div class="downloads">
+            JSON format: <a href="filter.json" download="filter.json">filter.json</a>
+        </div>
         <div class="datatable-reference">
             <a class="button" href="index">
                 Povratak na index stranicu

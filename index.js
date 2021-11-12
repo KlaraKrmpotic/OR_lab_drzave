@@ -53,6 +53,10 @@ app.get('/style/datatable.css', (req, res) => {
     res.sendFile(path.join(__dirname + '/style/datatable.css'))
 });
 
+app.get('/filter.json', (req, res) => {
+    res.sendFile(path.join(__dirname + '/filter.json'))
+});
+
 module.exports = router;
 
 app.listen(3000, () => {

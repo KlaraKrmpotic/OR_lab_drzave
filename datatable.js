@@ -6,7 +6,6 @@ const db = require('./databaseHandler');
 const fs = require('fs')
 
 router.get('/', async function (req, res) {
-
     const sqlCountries = `select countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
                   continent, area, population from country, city where city.cityId = ANY(country.cities);`;
     try {
@@ -21,7 +20,6 @@ router.get('/', async function (req, res) {
     }
 });
 
-// FILTRIRAJ PO ZADANOJ VRIJEDNOSTI U ZADANOM ATRIBUTU
 router.post('/filter', async function (req, res){
     var v = req.body.vrijednost;
     var p = req.body.polje;
@@ -50,6 +48,9 @@ router.post('/filter', async function (req, res){
         fs.writeFile('filter.json', JSON.stringify(countriesResult), (err) => {
             if (err) throw err;
         })
+        app.get('/filter.json', (req, res) => {
+            res.sendFile(path.join(__dirname + '/filter.json'))
+        });
         res.render('datatable', {
             title: 'Datatable',
             countries: countriesResult,
@@ -60,8 +61,5 @@ router.post('/filter', async function (req, res){
     }
 });
 
-app.get('/style/datatable.css', (req, res) => {
-    res.sendFile(path.join(__dirname + '/style/datatable.css'))
-});
 
 module.exports = router; 
