@@ -37,13 +37,6 @@ app.use(methodOverride(function (req, res) {
     }
 }));
 
-router.get('/', function (req, res, next) {
-    res.render('index', {
-        title: 'Index',
-        linkActive: 'index'
-    });
-});
-
 app.get('/drzave.json', (req, res) => {
     res.sendFile(path.join(__dirname + '/drzave.json'))
 });
@@ -56,8 +49,8 @@ app.get('/pictures/worldMap.jpg', (req, res) => {
     res.sendFile(path.join(__dirname + '/pictures/worldMap.jpg'))
 });
 
-app.get('/style/index.css', (req, res) => {
-    res.sendFile(path.join(__dirname + '/style/index.css'))
+app.get('/filter.json', (req, res) => {
+    res.sendFile(path.join(__dirname + '/filter.json'))
 });
 
 module.exports = router;
