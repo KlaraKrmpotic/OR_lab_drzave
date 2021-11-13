@@ -1,0 +1,125 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://github.com/KlaraKrmpotic/OR_lab_drzave/blob/main/drzave.json", 
+	"title": "Root", 
+    "description": "10 countries in the world",
+	"type": "array",
+	"items":{
+		"title": "Country", 
+        "description": "Country from the list",
+		"type": "object",
+		"required": [
+			"countryid",
+			"countryname",
+			"isocode",
+			"callingcode",
+			"currency",
+			"language",
+			"cities",
+			"continent",
+			"area",
+			"population"
+		],
+		"properties": {
+			"countryid": {
+				"title": "Countryid", 
+				"type": "integer",
+				"examples": [
+					1
+				]
+			},
+			"countryname": {
+				"title": "Countryname", 
+				"type": "string",
+				"examples": [
+					"Croatia"
+				]
+			},
+			"isocode": {
+				"title": "Isocode", 
+				"type": "string",
+				"examples": [
+					"HRV"
+				]
+			},
+			"callingcode": {
+				"title": "Callingcode", 
+				"type": "integer",
+				"examples": [
+					385
+				]
+			},
+			"currency": {
+				"title": "Currency", 
+				"type": "string",
+				"examples": [
+					"kuna"
+				]
+			},
+			"language": {
+				"title": "Language", 
+				"type": "string",
+				"examples": [
+					"Croatian"
+				]
+			},
+			"cities": {
+				"title": "Cities", 
+				"type": "array",
+				"items":{
+					"title": "City", 
+					"type": "object",
+					"required": [
+						"cityid",
+						"cityname",
+						"citypopulation"
+					],
+					"properties": {
+						"cityid": {
+							"title": "Cityid", 
+							"type": "integer",
+							"examples": [
+								1
+							]
+						},
+						"cityname": {
+							"title": "Cityname", 
+							"type": "string",
+							"examples": [
+								"Zagreb"
+							]
+						},
+						"citypopulation": {
+							"title": "Citypopulation", 
+							"type": "integer",
+							"examples": [
+								802338
+							]
+						}
+					}
+				}
+			},
+			"continent": {
+				"title": "Continent", 
+				"type": "string",
+				"examples": [
+					"Europe"
+				]
+			},
+			"area": {
+				"title": "Area", 
+				"type": "integer",
+				"examples": [
+					56594
+				]
+			},
+			"population": {
+				"title": "Population", 
+				"type": "integer",
+				"examples": [
+					4058165
+				]
+			}
+		}
+	}
+}

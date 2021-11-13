@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Klara Krmpotic">
+    <meta name="licence" content="MIT Licence">
+    <meta name="description" content="List of random 10 countries and their information and 2 of their biggest cities">
+    <title>Countries</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            width:700px;
+            height:450px;
+            float: center;
+        }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: gray;
+        }
+
+        .repozitorij {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        .downloads {
+            font-size: 1rem;
+        }
+
+        .button {
+            border-radius: 0.5rem;
+            background-color:rgb(14, 189, 136);
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            
+        }
+
+        .button:hover {
+            color: white;
+            background-color:cadetblue;
+        }
+
+        .footer, .header {
+            background: #8ccfc2;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .footer {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+
+        .header {
+            padding: 15px;
+        }
+
+        h1 {
+            text-align: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="downloads">
+            JSON format: <a href="drzave.json" download="drzave.json">drzave.json</a>
+        </div>
+        <a class="button" href="datatable">
+            Prikaz u tablici
+        </a>
+        <div class="downloads">
+            CSV format: <a href="drzave.csv" download="drzave.csv">drzave.csv</a>
+        </div>
+    </header>
+    <main>
+        <h1>Države</h1>
+        <div>
+            <a href="https://github.com/KlaraKrmpotic/OR_lab_drzave/releases/tag/v1.1.0" class="repozitorij">GitHub repozitorij</a>
+        </div>
+        <br>
+        <div>
+            <img src="./pictures/worldMap.jpg" alt="Karta svijeta">
+        </div>
+    </main>
+    <footer class="footer">
+        <div>Otvoreno računarstvo</div>
+        <div>Laboratorijske vježbe</div>
+        <div>ak. god. 2021./2022.</div>
+    </footer>
+</body>
+</html>

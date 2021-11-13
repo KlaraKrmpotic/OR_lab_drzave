@@ -61,5 +61,13 @@ router.post('/filter', async function (req, res){
     }
 });
 
+var index = require('./index');
+router.get('/index', function (req, res, next) {
+    res.render('index', {
+        title: 'Index',
+        linkActive: 'index'
+    });
+});
+
 
 module.exports = router; 
