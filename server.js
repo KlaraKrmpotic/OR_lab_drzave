@@ -53,6 +53,10 @@ app.get('/filter.json', (req, res) => {
     res.sendFile(path.join(__dirname + '/filter.json'))
 });
 
+app.get('/filter.csv', (req, res) => {
+    res.sendFile(path.join(__dirname + '/filter.csv'))
+});
+
 module.exports = router;
 
 app.listen(3000, () => {

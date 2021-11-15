@@ -4,6 +4,7 @@ const pg = require('pg');
 const app = express();
 const db = require('./databaseHandler');
 const fs = require('fs')
+const fastcsv = require("fast-csv");
 
 router.get('/', async function (req, res) {
     const sqlCountries = `select countryId, countryName, ISOcode, callingCode, currency, language, cityName, cityPopulation, 
@@ -48,6 +49,11 @@ router.post('/filter', async function (req, res){
         fs.writeFile('filter.json', JSON.stringify(countriesResult), (err) => {
             if (err) throw err;
         })
+
+        const ws = fs.createWriteStream("filter.csv");
+        const jsonData = JSON.parse(JSON.stringify(countriesResult));
+        fastcsv.write(jsonData, { headers: true }).pipe(ws);
+
         res.render('datatable', {
             title: 'Datatable',
             countries: countriesResult,
