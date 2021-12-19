@@ -2,20 +2,6 @@ const {Pool} = require('pg');
 const express = require('express');
 const router = express.Router();
 
-// const fetch = require('node-fetch');
-var cacheManager = require('cache-manager');
-var cacheManagerFs = require('cache-manager-fs');
-var cache = cacheManager.caching({
-  store: cacheManagerFs, 
-  options: {
-    ttl: 60*60, 
-    maxsize: 1000*1000*1000, 
-    path:'fscache', 
-    preventfill:true, 
-    reviveBuffers: true
-  }
-});
-
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -29,9 +15,8 @@ module.exports = {
         const start = Date.now();
         return pool.query(text, params)
             .then(res => {
-                const duration = Date.now() - start;
-                //console.log('executed query', {text, params, duration, rows: res.rows});
-                return res;
+              const duration = Date.now() - start;
+              return res;
             });
     },
     pool: pool
