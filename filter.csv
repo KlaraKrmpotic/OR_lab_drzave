@@ -1,7 +1,3 @@
 countryid,countryname,isocode,callingcode,currency,language,cityname,citypopulation,continent,area,population
-1,Croatia,HRV,385,kuna,Croatian,Zagreb,802338,Europe,56594,4058165
-1,Croatia,HRV,385,kuna,Croatian,Split,178192,Europe,56594,4058165
-7,Canada,CAN,1,dollar,English,Ottawa,934243,North America,9984670,38246108
-7,Canada,CAN,1,dollar,English,Toronto,2731571,North America,9984670,38246108
-10,United_States,USA,1,dollar,English,Washington D.C.,6385162,North America,9833520,331449281
-10,United_States,USA,1,dollar,English,New York City,20140470,North America,9833520,331449281
+11,Croatia,HRV,385,kuna,Croatian,Zagreb,802338,Europe,301230,60589445
+11,Croatia,HRV,385,kuna,Croatian,Split,178192,Europe,301230,60589445

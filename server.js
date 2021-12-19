@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
-const db = require('./databaseHandler');
+const db = require('./datatable');
 const router = express.Router();
 
 app.set('view engine', 'ejs');
@@ -10,22 +10,16 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 app.use(bodyParser.json())
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-)
+app.use(bodyParser.urlencoded({ extended: true }))
 
-/*
-app.get('/index', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+app.use('/index', function (req, res, next) {
+    res.render('index', {
+        title: 'Index',
+        linkActive: 'index'
+    });
 });
-*/
-var index = require('./index');
-app.use('/index', index);
 
-var datatable = require('./datatable');
-app.use('/datatable', datatable);
+// app.use('/datatable', db);
 
 const methodOverride = require('method-override')
  
@@ -55,6 +49,57 @@ app.get('/filter.json', (req, res) => {
 
 app.get('/filter.csv', (req, res) => {
     res.sendFile(path.join(__dirname + '/filter.csv'))
+});
+
+app.get('/datatable', db.getCountriesDatatable)
+app.post('/datatable/filter', db.getFilteredCountries)
+app.get('/countries', db.getCountries)
+app.get('/countries/:id', db.getCountryById)
+app.get('/countries/continent/:value', db.getCountryByContinent)
+app.get('/countries/currency/:value', db.getCountryByCurrency)
+app.get('/countries/area/:value', db.getCountryByArea)
+app.post('/countries', db.createCountry)
+app.put('/countries/:id', db.updateCountry)
+app.delete('/countries/:id', db.deleteCountry)
+
+app.get('*', function(request, response){
+    response.status(501).json({
+        status: "Not Implemented",
+        message: "Method not implemented.",
+        response: null
+    })
+});
+
+app.post('*', function(request, response){
+    response.status(501).json({
+        status: "Not Implemented",
+        message: "Method not implemented.",
+        response: null
+    })
+});
+
+app.put('*', function(request, response){
+    response.status(501).json({
+        status: "Not Implemented",
+        message: "Method not implemented.",
+        response: null
+    })
+});
+
+app.delete('*', function(request, response){
+    response.status(501).json({
+        status: "Not Implemented",
+        message: "Method not implemented.",
+        response: null
+    })
+});
+
+app.patch('*', function(request, response){
+    response.status(501).json({
+        status: "Not Implemented",
+        message: "Method not implemented.",
+        response: null
+    })
 });
 
 module.exports = router;
