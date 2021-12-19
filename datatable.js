@@ -1,7 +1,4 @@
 const express = require('express');
-const router = express.Router();
-const pg = require('pg');
-const app = express();
 const fs = require('fs')
 const fastcsv = require("fast-csv");
 const {Pool} = require('pg');
@@ -85,7 +82,7 @@ const getFilteredCountries = async function (request, response) {
 };
 
 const getIndex = (request, response, next) => {
-    res.render('index', {
+    response.render('index', {
         title: 'Index',
         linkActive: 'index'
     });

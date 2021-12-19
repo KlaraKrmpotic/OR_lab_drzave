@@ -19,8 +19,6 @@ app.use('/index', function (req, res, next) {
     });
 });
 
-// app.use('/datatable', db);
-
 const methodOverride = require('method-override')
  
 app.use(methodOverride(function (req, res) {
