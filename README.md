@@ -10,7 +10,7 @@
 
 **Version**: 1.0
 
-**Last update**: November 8th, 2021
+**Last update**: December 20th, 2021
 
 **Languages**: croatian, english
 
