@@ -1,0 +1,307 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "version": "3.0",
+        "title": "Countries",
+        "description": "List of random 10 countries and their information and 2 of their biggest cities."
+    },
+    "paths": {
+        "/countries": {
+            "get": {
+                "description": "Returns a list of all the countries in the database",
+                "responses": {
+                    "200": {
+                        "description": "Successfully returned all countries.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CountryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed to fetch countries."
+                    }
+                }
+              },
+            "post": {
+                "description": "Creates a new country",
+                "responses": {
+                    "201": {
+                        "description": "Successfully created country.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CreatedResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/{id}": {
+            "get": {
+                "description": "Returns a specific country by ID",
+                "parameters": [{
+                    "name": "countryId",
+                    "in": "path",
+                    "description": "ID of country to return.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Successfully returned country with wanted ID.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CountryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No country with area greated than given value.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "Changes parametar for a country with a given ID",
+                "parameters": [{
+                    "name": "countryId",
+                    "in": "path",
+                    "description": "ID of country to change.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Successfully changed a country with given ID.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdatedResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No country with given ID.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete country with a given ID",
+                "parameters": [{
+                    "name": "countryId",
+                    "in": "path",
+                    "description": "ID of country to delete.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted a country with given ID.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DeletedResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No country with given ID.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/area/{value}": {
+            "get": {
+                "description": "Get countries with area larger than given value",
+                "parameters": [{
+                    "name": "area",
+                    "in": "path",
+                    "description": "Country area.",
+                    "required": true,
+                    "schema": {
+                        "type": "integer"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List of all the countries with area greater than given value."
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No country have area greater than the given value.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/currency/{value}": {
+            "get": {
+                "description": "Get countries that have given value as currency",
+                "parameters": [{
+                    "name": "currency",
+                    "in": "path",
+                    "description": "Country currency.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List of all the countries that have given value as currency."
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No country has given value as their currency.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/continent/{value}": {
+            "get": {
+                "description": "Get countries that are on value continent",
+                "parameters": [{
+                    "name": "continent",
+                    "in": "path",
+                    "description": "Countries located on given continent.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List of all the countries that are located on given continent."
+                    },
+                    "400": {
+                        "description": "Invalid request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/400Response"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No countries are located on the given continent.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/404Response"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+    }
+}
+   
