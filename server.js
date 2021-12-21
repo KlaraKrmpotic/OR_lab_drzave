@@ -49,6 +49,10 @@ app.get('/filter.csv', (req, res) => {
     res.sendFile(path.join(__dirname + '/filter.csv'))
 });
 
+app.get('/openapi.json', (req, res) => {
+    res.sendFile(path.join(__dirname + '/openapi.json'))
+});
+
 app.get('/datatable', db.getCountriesDatatable)
 app.post('/datatable/filter', db.getFilteredCountries)
 app.get('/countries', db.getCountries)
