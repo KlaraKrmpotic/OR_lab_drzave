@@ -61,7 +61,7 @@ app.get('/countries/continent/:value', db.getCountryByContinent)
 app.get('/countries/currency/:value', db.getCountryByCurrency)
 app.get('/countries/area/:value', db.getCountryByArea)
 app.post('/countries', db.createCountry)
-app.put('/countries/:id', db.updateCountry)
+app.put('/countries/:id/:attribute/:value', db.updateCountry)
 app.delete('/countries/:id', db.deleteCountry)
 
 app.get('*', function(request, response){

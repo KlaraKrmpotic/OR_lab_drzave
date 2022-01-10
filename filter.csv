@@ -1,13 +1,7 @@
 countryid,countryname,isocode,callingcode,currency,language,cityname,citypopulation,continent,area,population
-1,Croatia,HRV,385,kuna,Croatian,Zagreb,802338,Europe,56594,4058165
-1,Croatia,HRV,385,kuna,Croatian,Split,178192,Europe,56594,4058165
-2,United_Kingdom,GBR,44,pound,English,London,8961989,Europe,242495,67081000
-2,United_Kingdom,GBR,44,pound,English,Manchester,552858,Europe,242495,67081000
-3,France,FRA,33,euro,French,Paris,2175601,Europe,640679,67413000
-3,France,FRA,33,euro,French,Marseille,863310,Europe,640679,67413000
-4,Germany,GER,49,euro,German,Berlin,3664088,Europe,357022,83190556
-4,Germany,GER,49,euro,German,Munich,1488202,Europe,357022,83190556
-11,Croatia,HRV,385,kuna,Croatian,Zagreb,802338,Europe,301230,60589445
-11,Croatia,HRV,385,kuna,Croatian,Split,178192,Europe,301230,60589445
-12,Italy,ITA,39,euro,Italian,Zagreb,802338,Europe,98765432,12345678
-12,Italy,ITA,39,euro,Italian,Split,178192,Europe,98765432,12345678
+3,France,FR ,33,euro,French,Paris,2175601,Europe,640679,67413000
+3,France,FR ,33,euro,French,Marseille,863310,Europe,640679,67413000
+4,Germany,DE ,49,euro,German,Berlin,3664088,Europe,357022,83190556
+4,Germany,DE ,49,euro,German,Munich,1488202,Europe,357022,83190556
+12,Italy,IT ,39,euro,Italian,Zagreb,802338,Europe,98765432,12345678
+12,Italy,IT ,39,euro,Italian,Split,178192,Europe,98765432,12345678

@@ -102,6 +102,12 @@ const getCountries = (request, response) => {
                 response: null
             })
         } else {
+            results.rows.forEach(country => {
+                country['@context'] = {
+                    name: 'https://schema.org/name',
+                    ISOcode: 'https://schema.org/addressCountry'
+                }
+            })
             response.status(200).json({
                 status: "OK",
                 message: "Returned list of all the countries in the database.",
@@ -126,6 +132,12 @@ const getCountryById = (request, response) => {
             })
         } else {
             if(results.rowCount > 0) {
+                results.forEach(country => {
+                    country['@context'] = {
+                        name: 'https://schema.org/name',
+                        ISOcode: 'https://schema.org/addressCountry'
+                    }
+                })
                 response.status(200).json({
                     status: "OK",
                     message: "Country with countryId: " + countryId,
@@ -265,11 +277,10 @@ const createCountry = (request, response) => {
 
 const updateCountry = (request, response) => {
     const countryId = parseInt(request.params.id)
-    const { population, area } = request.query
+    const attribute = request.params.attribute
+    const value = request.params.value
 
-    pool.query('UPDATE country SET population = $1, area = $2 WHERE countryId = $3',
-        [population, area, countryId],
-        (error, results) => {
+    pool.query(`UPDATE country SET ${attribute} = '${value}' WHERE countryId = ($1)`, [countryId], (error, results) => {
             if (error) {
                 console.log(error)
                 response.status(400).json({
